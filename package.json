@@ -1,0 +1,39 @@
+{
+  "name": "postcss-aurelia-ux",
+  "version": "0.1.0",
+  "description": "PostCSS plugin to load Aurelia UX javascript style bindings.",
+  "keywords": [
+    "postcss",
+    "css",
+    "postcss-plugin",
+    "aurelia",
+    "aurelia-ux"
+  ],
+  "author": "Zacharey Hollingshead <zach.hollingshead@gmail.com>",
+  "license": "MIT",
+  "repository": "ZHollingshead/postcss-aurelia-ux",
+  "bugs": {
+    "url": "https://github.com/ZHollingshead/postcss-aurelia-ux/issues"
+  },
+  "homepage": "https://github.com/ZHollingshead/postcss-aurelia-ux",
+  "dependencies": {
+    "@types/node": "^8.0.26",
+    "postcss": "^6.0.10"
+  },
+  "devDependencies": {
+    "eslint": "^3.19.0",
+    "eslint-config-postcss": "^2.0.2",
+    "jest": "^20.0.0",
+    "typescript": "^2.0.0"
+  },
+  "scripts": {
+    "build": "tsc --outDir ./dist --module commonjs ./src/index.ts",
+    "test": "jest && eslint *.js"
+  },
+  "eslintConfig": {
+    "extends": "eslint-config-postcss/es5",
+    "env": {
+      "jest": true
+    }
+  }
+}
