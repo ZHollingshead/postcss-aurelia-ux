@@ -9,6 +9,7 @@
     "aurelia",
     "aurelia-ux"
   ],
+  "main": "./dist/index.js",
   "author": "Zacharey Hollingshead <zach.hollingshead@gmail.com>",
   "license": "MIT",
   "repository": "ZHollingshead/postcss-aurelia-ux",
@@ -21,19 +22,14 @@
     "postcss": "^6.0.10"
   },
   "devDependencies": {
+    "@types/jest": "^20.0.8",
     "eslint": "^3.19.0",
     "eslint-config-postcss": "^2.0.2",
     "jest": "^20.0.0",
     "typescript": "^2.0.0"
   },
   "scripts": {
-    "build": "tsc --outDir ./dist --module commonjs ./src/index.ts",
-    "test": "jest && eslint *.js"
-  },
-  "eslintConfig": {
-    "extends": "eslint-config-postcss/es5",
-    "env": {
-      "jest": true
-    }
+    "build": "tsc --project tsconfig.build.json --outDir dist --module es2015 --target es2015",
+    "test": "jest"
   }
 }

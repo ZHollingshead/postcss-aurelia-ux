@@ -2,8 +2,8 @@
   "compileOnSave": false,
   "compilerOptions": {
     "sourceMap": true,
-    "target": "es6",
-    "module": "es6",
+    "target": "es5",
+    "module": "amd",
     "declaration": false,
     "noImplicitAny": false,
     "removeComments": true,
@@ -16,14 +16,14 @@
     "noEmitHelpers": false,
     "allowJs": true,
     "moduleResolution": "node",
-    "lib": ["es2017", "dom"]
+    "lib": ["es2017", "dom"],
+    "outFile": "./dist/index.js"
   },
   "exclude": [
-    "node_modules"
+    "node_modules",
+    "test"
   ],
   "filesGlob": [
-    "./src/**/*.ts",
-    "./test/**/*.ts",
-    "./custom_typings/**/*.d.ts"
+    "./src/**/*.ts"
   ]
 }

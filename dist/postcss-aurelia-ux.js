@@ -1,13 +1,10 @@
-"use strict";
-exports.__esModule = true;
-var postcss = require("postcss");
-function PostcssAureliaUx() {
-    return postcss.plugin('postcss-aurelia-ux', function () {
-        return function (root, result) {
-            root.replaceValues(/"\${[^\r\n]*}"/g, function (substring) {
+import * as postcss from 'postcss';
+export function PostcssAureliaUx() {
+    return postcss.plugin('postcss-aurelia-ux', () => {
+        return (root, result) => {
+            root.replaceValues(/"\${[^\r\n]*}"/g, substring => {
                 return substring.replace('"${', '${').replace('}"', '}');
             });
         };
     });
 }
-exports.PostcssAureliaUx = PostcssAureliaUx;
